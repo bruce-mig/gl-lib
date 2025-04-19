@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 
    emp_t *emp2 = calloc(1, sizeof(emp_t));
    strncpy(emp2->name, "Abhishek", strlen("Abhishek"));
-   emp1->salary = 150000;
+   emp2->salary = 150000;
    strncpy(emp2->designation, "SE3", strlen("SE3"));
    emp2->emp_id = 32;
    glthread_node_init((&emp2->glnode));
