@@ -1,6 +1,8 @@
 #ifndef __GLTHREADS__
 #define __GLTHREADS__
 
+#include <stdint.h> // Add this include for uintptr_t
+
 typedef struct glthread_node_ {
 
    struct glthread_node_ *left;
@@ -37,6 +39,6 @@ void init_glthread(glthread_t *glthread, unsigned int offset);
 
 /* Macro to compute the offset of a given field in a given C structure. */
 #define offsetof(struct_name, field_name)                                      \
-   ((unsigned int)&((struct_name *)0)->field_name)
+   ((uintptr_t)&((struct_name *)0)->field_name)
 
 #endif /* __GLTHREADS__ */
